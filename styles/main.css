@@ -137,6 +137,11 @@ article img {
 	float: right;
 	margin: .5em 0 1em 1em;
 	border: 1px solid black;
+	transition: 3s;
+}
+article img:hover {
+	transform-origin: left top;
+	transform: rotate(720deg);
 }
 
 /* the styles for the aside */
@@ -157,7 +162,25 @@ aside h3 {
 }
 aside img {
 	padding-bottom: 1em;
+	transition: 2s;
+	animation: slideright 3s ease-in-out 2s 4 alternate;
 }
+aside img:hover {
+margin-left: 100px;
+margin-top: 20px;
+}
+@keyframes slideright {
+	from {
+		margin-left: 0;
+		margin-top: 0;
+	}
+	to {
+		margin-left: 100px;
+		margin-top: 20px;
+		transform: scale(1.4,1.4);
+	}
+}
+
 
 /* the styles for the footer */
 footer {
